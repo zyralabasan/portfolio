@@ -1,0 +1,25 @@
+.about {
+  background: #2c2c2c;
+  color: white;
+  padding: 4rem;
+}
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about img {
+  border-radius: 50%;
+  border: 4px solid #ff4081;
+}
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+.about-text ul li {
+  background: #1e1e1e;
+  margin: 0.3rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}

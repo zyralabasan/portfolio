@@ -1,0 +1,104 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8%;
+  min-height: 90vh;
+  background: #f9f9f9; /* light clean background */
+  color: #222;
+  gap: 2rem;
+}
+
+/* Left Section */
+.home-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.home-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.home-role {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  color: #444;
+}
+
+.home-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Buttons */
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.btn {
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn.primary {
+  background: #111;
+  color: white;
+}
+.btn.primary:hover {
+  background: #ccc;
+}
+.btn.secondary {
+  border: 2px solid #111;
+  color: #111;
+}
+.btn.secondary:hover {
+  background: #111;
+  color: white;
+}
+
+/* Right Section */
+.home-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  max-width: 520px;   /* make it larger */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px; /* optional: soften corners */
+  background: none;   /* no background so it blends with page */
+  padding: 40px;
+  transition: transform 0.3s ease;}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+  .home-left {
+    max-width: 100%;
+  }
+  .home-buttons {
+    justify-content: center;
+  }
+  .profile-img {
+    max-width: 280px; /* scale down for mobile */
+  }
+}

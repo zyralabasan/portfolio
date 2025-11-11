@@ -11,7 +11,7 @@ function Home({ name }) {
     { src: "/icons/lightbulb.svg", title: "Creative Solutions", desc: "Combining creativity with analytical thinking to solve complex problems." },
   ];
   
-  // Home Section
+  {/* Home Section */}
   return (
     <div className="home-container page-transition">
       <section className="home-section">
@@ -46,7 +46,7 @@ function Home({ name }) {
         </div>
       </section>
 
-      // Skills Section
+      {/* Skills Section */}
       <section className="skills-section">
         <div className="section-header">
           <h2 className="section-title">What I Do</h2>
@@ -63,7 +63,7 @@ function Home({ name }) {
         </div>
       </section>
 
-      // CTA Section
+      {/* CTA Section */}
       <section className="cta-section">
         <h2 className="section-title2">Ready to Create Something Amazing?</h2>
         <p className="section-subtitle2">

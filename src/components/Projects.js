@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiExternalLink, FiGithub, FiAward, FiX, FiEye, FiLink } from "react-icons/fi";
+import { FiGithub, FiAward, FiX, FiEye, FiLink } from "react-icons/fi";
 import project1Image from '../assets/project1.png';
 import project2Image from '../assets/project2.png';
 import project3Image from '../assets/project3.png';

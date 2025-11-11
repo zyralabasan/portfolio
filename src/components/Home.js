@@ -10,8 +10,8 @@ function Home({ name }) {
     { src: "/icons/code.svg", title: "Web Development", desc: "Building responsive and interactive web applications." },
     { src: "/icons/lightbulb.svg", title: "Creative Solutions", desc: "Combining creativity with analytical thinking to solve complex problems." },
   ];
-  
-  {/* Home Section */}
+
+  // Home Section
   return (
     <div className="home-container page-transition">
       <section className="home-section">

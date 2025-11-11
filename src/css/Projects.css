@@ -1,36 +1,127 @@
-.projects {
-  padding: 4rem;
-  background: #1e1e1e;
-  color: white;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Page Layout */
+.projects-container {
+  @apply min-h-screen pt-24 pb-20 px-4;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+.content-wrapper {
+  @apply max-w-6xl mx-auto;
 }
 
-.project-card {
-  background: #2c2c2c;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
+/* Header */
+.page-header {
+  @apply text-center mb-16;
 }
-.project-card:hover {
-  transform: translateY(-10px);
+
+.main-title {
+  @apply text-5xl font-bold mb-4 font-serif;
 }
-.project-card button {
-  margin-top: 1rem;
-  background: #00adb5;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  color: white;
+
+.subtitle {
+  @apply text-gray-600 max-w-2xl mx-auto;
 }
-.project-card button:hover {
-  background: #00979e;
+
+/* Filters */
+.filter-buttons-container {
+  @apply flex flex-wrap justify-center gap-4 mb-12;
+}
+
+.filter-button {
+  @apply px-4 py-2 rounded transition;
+}
+
+.active-filter {
+  @apply bg-black text-white;
+}
+
+.filter-button:not(.active-filter) {
+  @apply bg-gray-200 text-gray-800 hover:bg-black hover:text-white;
+}
+
+/* Projects Grid */
+.projects-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+/* Project Card */
+.card-container {
+  @apply cursor-pointer overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg;
+}
+
+.image-wrapper {
+
+  @apply relative;
+}
+
+.card-image {
+  @apply w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300;
+}
+
+.overlay-actions {
+  @apply absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex justify-center items-center gap-4 transition-opacity duration-300;
+}
+
+.action-button {
+  @apply bg-white p-2 rounded-full hover:bg-gray-200 transition;
+}
+
+.icon-color {
+  @apply text-black;
+}
+
+.icon-color-blue {
+  @apply text-blue-600;
+}
+
+.card-content {
+  @apply p-4;
+}
+
+.card-title {
+  @apply text-xl font-semibold mb-2 flex items-center gap-2;
+}
+
+.card-description {
+  @apply text-gray-600 mb-3;
+}
+
+.card-tags {
+  @apply flex flex-wrap gap-2;
+}
+
+.tag-badge {
+  @apply bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded;
+}
+
+/* Load More Button */
+.load-more-container {
+  @apply text-center mt-12;
+}
+
+.load-more-button {
+  @apply px-6 py-3 border border-black rounded text-black transition hover:bg-black hover:text-white;
+}
+
+/* Modal */
+.modal-backdrop {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4;
+
+}
+
+.modal-content-wrapper {
+  @apply relative max-w-3xl w-full max-h-[80vh] h-[80vh] flex items-center justify-center p-4 bg-white rounded-lg;
+
+}
+
+.modal-close-button {
+  @apply absolute top-4 right-4 text-gray-800 hover:text-gray-600;
+
+}
+
+.modal-image {
+  @apply max-w-full max-h-full object-contain;
 }

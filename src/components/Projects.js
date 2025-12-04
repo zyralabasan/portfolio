@@ -181,7 +181,14 @@ const Projects = () => {
 
   const openModal = (image) => {
     setSelectedImage(image);
-  };
+    
+    setTimeout(() => {
+      const modalBox = document.querySelector(".modal-content-wrapper");
+      if (modalBox) {
+        modalBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }, 50);
+  };  
 
   const closeModal = () => {
     setSelectedImage(null);

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Send } from "lucide-react";
+import emailjs from '@emailjs/browser'; // Import EmailJS
 import "../css/Contact.css";
 
 const MessageAlert = ({ message, isVisible }) => {
@@ -13,8 +14,8 @@ const MessageAlert = ({ message, isVisible }) => {
   );
 };
 
-//(State)it holds user's data
 function Contact() {
+  const form = useRef(); // Create a reference for the form
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,30 +26,44 @@ function Contact() {
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
-  //event handling trigger when user types in the form
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setShowAlert(false);
 
-    // Simulate a network request, send the form data to backend server
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // REPLACE THESE WITH YOUR ACTUAL EMAILJS KEYS
+    const SERVICE_ID = "service_jd2yddw";
+    const TEMPLATE_ID = "template_qwszflq";
+    const PUBLIC_KEY = "pF1Iy-0HyKpnzA0LH";
 
-    setAlertMessage("Message sent successfully!");
-    setShowAlert(true); // Show alert after setting the message
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-
-
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+        publicKey: PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          setAlertMessage("Message sent successfully!");
+          setShowAlert(true);
+          setFormData({ name: "", email: "", subject: "", message: "" });
+          
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        },
+        (error) => {
+          console.error('FAILED...', error.text);
+          setAlertMessage("Failed to send message. Please try again.");
+          setShowAlert(true);
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   useEffect(() => {
@@ -104,7 +119,8 @@ function Contact() {
           <div className="contact-form-container">
             <div className="form-card">
               <h2 className="form-title">Send Me a Message</h2>
-              <form onSubmit={handleSubmit} className="contact-form">
+              {/* Added ref={form} here to connect the form to the useRef hook */}
+              <form ref={form} onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group-grid">
                   <div>
                     <label htmlFor="name" className="form-label">
@@ -177,6 +193,7 @@ function Contact() {
           </div>
 
           <div className="contact-info-container">
+            {/* ... Rest of the component remains exactly the same ... */}
             <div className="info-card">
               <h3 className="info-title">Contact Information</h3>
               <div className="info-list">

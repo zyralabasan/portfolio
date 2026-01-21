@@ -37,7 +37,7 @@ function Contact() {
 
     // REPLACE THESE WITH YOUR ACTUAL EMAILJS KEYS
     const SERVICE_ID = "service_jd2yddw";
-    const TEMPLATE_ID = "template_qwszflq";
+    const TEMPLATE_ID = "template_n0iwc6n";
     const PUBLIC_KEY = "pF1Iy-0HyKpnzA0LH";
 
     emailjs

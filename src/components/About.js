@@ -8,16 +8,14 @@ import "../css/About.css";
 
 function About() {
   const skills = [
-    { name: "Adobe Creative Suite", level: 90, category: "design" },
-    { name: "Python", level: 75, category: "data" },
-    { name: "React", level: 80, category: "web" },
-    { name: "Figma", level: 85, category: "design" },
-    { name: "Canva", level: 85, category: "design" },
-    { name: "SQL", level: 70, category: "data" },
-    { name: "JavaScript", level: 75, category: "web" },
-    { name: "Tableau", level: 65, category: "data" },
-    { name: "PHP", level: 70, category: "web" },
-    { name: "Node.js", level: 70, category: "web" },
+    { name: "React.js / Next.js", level: 90, category: "frontend" },
+    { name: "Laravel (PHP)", level: 85, category: "backend" },
+    { name: "Django (Python)", level: 80, category: "backend" },
+    { name: "PostgreSQL / Prisma", level: 85, category: "database" },
+    { name: "DigitalOcean / AWS", level: 75, category: "cloud" },
+    { name: "Git & GitHub", level: 85, category: "tools" },
+    { name: "Figma & Canva", level: 90, category: "design" },
+    { name: "Data Analysis (Pandas)", level: 75, category: "data" },
   ];
 
   return (
@@ -25,7 +23,7 @@ function About() {
       <div className="section-header">
         <h1 className="main-title">About Me</h1>
         <p className="subtitle">
-          Get to know the person behind the designs and data
+          Get to know the developer and designer behind the code
         </p>
       </div>
 
@@ -39,15 +37,14 @@ function About() {
             />
             <h2 className="profile-name">Zyra Mae P. Labasan</h2>
             <p className="profile-role">
-              Graphic Designer & Data Analyst
+              Full Stack Web Developer
             </p>
-            <p className="profile-detail">📍 Isabela, Phiilippines</p>
-            <p className="profile-detail">📆 Available for projects</p>
+            <p className="profile-detail">📍 Philippines</p>
+            <p className="profile-detail">📆 Available for full-time IT roles</p>
             <p className="profile-detail">📧 labasanzyramae24@gmail.com</p>
           </CardContent>
         </Card>
 
-        {/* Right Column: Tabs */}
         <div>
           <Tabs defaultValue="story">
             <TabsList className="tabs-list">
@@ -56,38 +53,27 @@ function About() {
               <TabsTrigger value="experience" className="tab-trigger">Experience</TabsTrigger>
             </TabsList>
 
-            {/* My Story Tab */}
             <TabsContent value="story">
               <Card className="tab-card">
                 <CardContent className="tab-content">
-                  <h3 className="tab-title">My Journey</h3>
+                  <h3 className="tab-title">My Developer Journey</h3>
                   <p>
-                    I'm a passionate creative professional who found my calling
-                    at the intersection of design and data. What started as a love
-                    for visual storytelling has evolved into a unique skill set
-                    that combines aesthetic sensibility with analytical thinking.
+                    I am a passionate IT professional who thrives at the intersection of robust backend architecture and intuitive user design. What started as a love for visual storytelling has evolved into a comprehensive technical skill set focused on modern web frameworks and live server deployment.
                   </p>
                   <p>
-                    During my studies in Information Technology , I discovered that data
-                    could tell stories just as compelling as any visual design.
-                    This realization led me to develop expertise in both graphic
-                    design and data analysis, allowing me to create solutions that
-                    are both beautiful and meaningful.
+                    Through rigorous hands-on projects, I have transitioned from building basic layouts to modernizing legacy PHP code into high-performance Next.js and Prisma environments. I take pride in seeing a project through its entire lifecycle—from the initial wireframes to executing database migrations and successfully deploying live on platforms like DigitalOcean.
                   </p>
                   <p>
-                    Today, I help businesses communicate their message through
-                    striking visuals while also uncovering insights that drive
-                    informed decision-making.
+                    Today, I leverage my diverse background to bridge the gap between creative teams and engineering challenges, ensuring that digital solutions are not only highly functional and scalable, but also visually striking.
                   </p>
                 </CardContent>
               </Card>
             </TabsContent>
 
-            {/* Skills Tab */}
-            <TabsContent value="skills">                                                  {/*This tab uses the skills array you defined earlier.*/}
-              <Card className="tab-card">                                                 {/*It uses the map() method to loop through each item in the array*/}
-                <CardContent className="tab-content-skills">                              {/*and create a new div for each skill.*/}
-                  <h3 className="tab-title mb-4">Technical Skills</h3>
+            <TabsContent value="skills">
+              <Card className="tab-card">
+                <CardContent className="tab-content-skills">
+                  <h3 className="tab-title mb-4">Technical Frameworks & Skills</h3>
                   {skills.map((skill) => (
                     <div key={skill.name} className="skill-item">
                       <div className="skill-header">
@@ -101,39 +87,38 @@ function About() {
               </Card>
             </TabsContent>
 
-            {/* Experience Tab */}
             <TabsContent value="experience">
               <Card className="tab-card">
                 <CardContent className="tab-content-experience">
-                  <h3 className="tab-title">Experience</h3>
+                  <h3 className="tab-title">Professional Experience</h3>
+                  
+                  <div className="experience-item">
+                    <h4 className="experience-title">
+                      IT Web Development Intern (OJT) | SariSariPH{" "}
+                      <span className="experience-date">• Feb 2026 - Apr 2026</span>
+                    </h4>
+                    <p className="experience-description">
+                      Performed rigorous quality testing and bug identification. Executed database migrations using Prisma, specifically ensuring exact targeting for the production sarisariph database. Submitted comprehensive weekly system health reports.
+                    </p>
+                  </div>
+
+                  <div className="experience-item">
+                    <h4 className="experience-title">
+                      Lead Developer (Capstone) | Cafeteria Management System{" "}
+                      <span className="experience-date">• Apr 2025 - Feb 2026</span>
+                    </h4>
+                    <p className="experience-description">
+                      Led a 5-person development team using Git version control. Transitioned legacy project architecture to modern frameworks utilizing Next.js, Prisma, and PostgreSQL. Successfully managed live cloud deployment on DigitalOcean.
+                    </p>
+                  </div>
+
                   <div className="experience-item">
                     <h4 className="experience-title">
                       Freelance Graphic Designer{" "}
-                      <span className="experience-date">• 2022 - Present</span>
+                      <span className="experience-date">• Jan 2026 - Present</span>
                     </h4>
                     <p className="experience-description">
-                      Creating brand identities, marketing materials, and digital
-                      designs and products for clients across industries.
-                    </p>
-                  </div>
-                  <div className="experience-item">
-                    <h4 className="experience-title">
-                      Design Intern{" "}
-                      <span className="experience-date">• 2024 - 2025</span>
-                    </h4>
-                    <p className="experience-description">
-                      Assisted in developing creative concepts for campaigns and
-                      gained experience in collaborative design processes.
-                    </p>
-                  </div>
-                  <div className="experience-item">
-                    <h4 className="experience-title">
-                      Data Analysis Coursework{" "}
-                      <span className="experience-date">• 2024 - 2025</span>
-                    </h4>
-                    <p className="experience-description">
-                      Comprehensive study of statistical analysis, visualization,
-                      and machine learning techniques.
+                      Designed comprehensive brand identities, vector logos (SVG format), and physical merchandise marketing materials such as woven labels and jersey mockups for clients like Rebruv Athletics.
                     </p>
                   </div>
 
@@ -141,20 +126,10 @@ function About() {
                   <div className="education-item">
                     <h4 className="education-title">
                       Bachelor of Science in Information Technology{" "}
-                      <span className="education-date">• 2021 - 2026</span>
+                      <span className="education-date">• Central Luzon State University</span>
                     </h4>
                     <p className="education-description">
-                      Focus on using computer systems, hardware, software, and networks to manage, process, store, secure, 
-                      and exchange all forms of electronic data
-                    </p>
-                  </div>
-                  <div className="education-item">
-                    <h4 className="education-title">
-                      Graphic Design Certificate{" "}
-                      <span className="education-date">• 2026 - 2027</span>
-                    </h4>
-                    <p className="education-description">
-                      Studied visual communication, typography, and branding.
+                      Core focus on full-stack development, database management, APIs, and modern deployment methodologies. Graduate of AWS Academy Cloud Foundations.
                     </p>
                   </div>
                 </CardContent>

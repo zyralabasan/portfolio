@@ -81,7 +81,7 @@ function Contact() {
       icon: <Mail className="contact-icon" />,
       label: "Email",
       value: "labasanzyramae24@gmail.com",
-      href: "mailto:labasanzyramae24@gmail.com",
+      href: "mailto:zyramaelabasan0@gmail.com",
     },
     {
       icon: <Phone className="contact-icon" />,

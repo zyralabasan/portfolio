@@ -8,6 +8,7 @@ import project5Image from '../assets/project5.png';
 import proto1Image from "../assets/proto1.png"
 import proto2Image from "../assets/proto2.png"
 import proto3Image from "../assets/proto3.png"
+import proto4Image from "../assets/proto4.png"
 import cert1 from "../assets/cert1.png";
 import cert2 from "../assets/cert2.png";
 import cert3 from "../assets/cert3.png";
@@ -27,16 +28,16 @@ const Projects = () => {
   ];
 
   const projects = [
-    {
+      {
       id: 1,
       type: "projects",
-      title: "Booking System",
+      title: "SariSariPH E-commerce Platform (OJT)",
       description:
-        "A user-friendly platform that seamlessly manages reservations and schedules to optimize booking efficiency.",
+        "Conducted deep quality assurance testing prior to launch. Managed database routing and migrations using Prisma, specifically targeting the production sarisariph database.",
       image: project1Image,
-      tags: ["PHP", "Django", "HTML/CSS"],
+      tags: ["React.js", "QA Testing", "Prisma", "Git/GitHub"],
       liveUrl: "#",
-      githubUrl: "https://github.com/zyralabasan/booking-system.git",
+      githubUrl: "https://github.com/walteribloguintoledo/sarisariph.com.git",
     },
     {
       id: 2,
@@ -52,13 +53,13 @@ const Projects = () => {
     {
       id: 3,
       type: "projects",
-      title: "Cafeteria Management System",
+      title: "Smart Cafeteria Management System (Capstone)",
       description:
-        "Modern, responsive portfolio website built with React and interactive elements.",
+        "Led a 3-person team to transition and modernize a legacy codebase into a high-performance web application. Executed live production deployment and server configuration on DigitalOcean.",      
       image: project3Image,
-      tags: ["PHP", "JavaScript", "Laravel"],
+      tags: ["Next.js", "Prisma", "PostgreSQL", "DigitalOcean"],      
       liveUrl: "#",
-      githubUrl: "https://github.com/zyralabasan/cafeteria-system.git",
+      githubUrl: "https://github.com/zyralabasan/Smart-Cafeteria-Management-System.git",
     },
     {
       id: 4,
@@ -83,11 +84,23 @@ const Projects = () => {
       githubUrl: "https://github.com/zyralabasan/cinefeel.git",
     },
   ];
+
   const prototypes = [
     {
       id: 6,
       type: "prototypes",
-      title: "Cafeteria Management System",
+      title: "SariSariPH E-commerce UI",
+      description:
+        "A comprehensive user interface prototype for a local e-commerce platform, detailing the user journey from product discovery to a seamless checkout experience.",
+      image: proto3Image, 
+      tags: ["UX/UI Design", "E-commerce", "Figma", "Wireframing"],
+      liveUrl: "#",
+      prototypeUrl: "https://sarisariph.com",
+    },
+    {
+      id: 7,
+      type: "prototypes",
+      title: "Smart Cafeteria Management System UI",
       description:
         "A high-fidelity prototype ofordering system for a university cafeteria, including a web portal.",
       image: proto1Image,
@@ -96,7 +109,7 @@ const Projects = () => {
       prototypeUrl: "https://www.figma.com/proto/5EoXX1HpTjqhCfKdiIemq2/RET-Cafeteria---Prototype?node-id=747-11594&t=S1erEOKeNbwwa9tH-1",
     },
     {
-      id: 7,
+      id: 8,
       type: "prototypes",
       title: "CLSUnity Mobile Application",
       description:
@@ -107,65 +120,66 @@ const Projects = () => {
       prototypeUrl: "https://www.canva.com/design/DAF-t2WE2Xs/LTJes9F3sckiGDqh2dpVFw/view?mode=prototype",
     },
     {
-      id: 8,
+      id: 9,
       type: "prototypes",
-      title: "Event Booking System",
+      title: "Rebruv Athletics Branding",
       description:
-        "An interactive platform prototype for booking and managing university events, allowing users to reserve spots and view event details seamlessly.",
-      image: proto3Image,
-      tags: ["Figma", "Wireframing"],
+        "Engineered visual brand identities, producing scalable SVG vector logos and designing precise layouts for physical merchandise including woven labels and jersey mockups.",
+      image: proto4Image,
+      tags: ["Graphic Design", "SVG", "Figma", "Canva"],
       liveUrl: "#",
-      prototypeUrl: "https://www.figma.com/proto/5EoXX1HpTjqhCfKdiIemq2/RET-Cafeteria---Prototype?node-id=747-11594&t=S1erEOKeNbwwa9tH-1",
-
+      githubUrl: "#",
+      prototypeUrl: "https://canva.link/bh5qfmz8ukigduw", 
+      prototypeUrl2: "https://canva.link/9v7e7msav35bgyn", 
     },
   ];
 
-  const certificates = [
-    {
-      id: 9,
-      type: "certificates",
-      title: "Data visualization",
-      description: "Issued by Coursera, this certificate validates my proficiency in the data cleaning and visualization.",
-      image: cert1,
-      tags: ["Data Cleaning", "Data Visualization"],
-      liveUrl: "#",
-    },
+const certificates = [
     {
       id: 10,
       type: "certificates",
-      title: "Python for Data Science",
-      description: "A certificate from IBM covering core Python libraries for data analysis like Pandas and NumPy.",
-      image: cert2,
-      tags: ["Python", "Data Science", "Data Analytics"],
+      title: "AWS Academy Cloud Foundations",
+      description: "Official certification validating fundamental proficiency in managing AWS Services, cloud concepts, and secure cloud configuration.",
+      image: cert5,
+      tags: ["AWS Academy", "Cloud Computing"],
       liveUrl: "#",
     },
     {
       id: 11,
       type: "certificates",
-      title: "Kaggle Crash Course",
-      description: "Completed a comprehensive course on building modern front-end applications with React.",
-      image: cert3,
-      tags: ["Kaggle", "Web Dev"],
+      title: "Concepts of OOP in PHP",
+      description: "Certificate of participation for mastering the core concepts of Object-Oriented Programming in PHP.",
+      image: cert4,
+      tags: ["PHP", "OOP", "Backend"],
       liveUrl: "#",
     },
     {
       id: 12,
       type: "certificates",
-      title: "Concepts of OOP in PHP",
-      description: "A certificate proving my foundational skills in coding with PHP.",
-      image: cert4,
-      tags: ["PHP", "Code Igniter"],
+      title: "Data Visualization using Bokeh",
+      description: "Authorized by the Coursera Project Network, demonstrating proficiency in building interactive data visualizations.",
+      image: cert1,
+      tags: ["Coursera", "Data Visualization", "Bokeh"],
       liveUrl: "#",
     },
     {
       id: 13,
       type: "certificates",
-      title: "Introduction to AWS Cloud",
-      description: "A certificate proving my foundational skills in managing AWS Services and Cloud.",
-      image: cert5,
-      tags: ["AWS Academy", "Coursera"],
+      title: "Data Visualization",
+      description: "Successfully completed the comprehensive Kaggle Learn course on Data Visualization techniques.",
+      image: cert2,
+      tags: ["Kaggle", "Data Analytics"],
       liveUrl: "#",
     },
+    {
+      id: 14,
+      type: "certificates",
+      title: "Pandas",
+      description: "Successfully completed the Kaggle Learn course focused on data manipulation and analysis using the Pandas library.",
+      image: cert3,
+      tags: ["Kaggle", "Pandas", "Python"],
+      liveUrl: "#",
+    }
   ];
 
   const allItems = [...projects, ...prototypes, ...certificates];
@@ -194,7 +208,8 @@ const Projects = () => {
     setSelectedImage(null);
   };
 
-  const Card = ({ title, description, image, tags, githubUrl, type, prototypeUrl }) => (
+  // Note the added prototypeUrl2 here!
+  const Card = ({ title, description, image, tags, githubUrl, type, prototypeUrl, prototypeUrl2 }) => (
     <div className="group card-container">
       <div className="image-wrapper">
         <img
@@ -203,7 +218,8 @@ const Projects = () => {
           className="card-image"
           onClick={() => openModal(image)}
         />
-        {(image || githubUrl || prototypeUrl) && (
+        {/* Updated condition to also check for prototypeUrl2 */}
+        {(image || githubUrl || prototypeUrl || prototypeUrl2) && (
           <div className="overlay-actions">
             {image && (
               <button
@@ -224,7 +240,20 @@ const Projects = () => {
                 <FiLink className="icon-color" />
               </a>
             )}
-            {githubUrl && (
+            
+            {/* Added rendering block for the second Canva link */}
+            {prototypeUrl2 && (
+              <a
+                href={prototypeUrl2}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="action-button"
+              >
+                <FiLink className="icon-color" />
+              </a>
+            )}
+
+            {githubUrl && githubUrl !== "#" && (
               <a
                 href={githubUrl}
                 target="_blank"
@@ -294,7 +323,7 @@ const Projects = () => {
         <div className="page-header">
           <h1 className="main-title">My Portfolio</h1>
           <p className="subtitle">
-            A showcase of my creative work, from projects and prototypes to professional certifications.
+            A showcase of my full-stack web development, digital design, and cloud deployment experience.
           </p>
         </div>
 
@@ -318,11 +347,6 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="load-more-container">
-          <button className="load-more-button">
-            Load More...
-          </button>
-        </div>
       </div>
       <ImageModal image={selectedImage} onClose={closeModal} />
     </div>

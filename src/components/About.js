@@ -41,7 +41,7 @@ function About() {
             </p>
             <p className="profile-detail">📍 Philippines</p>
             <p className="profile-detail">📆 Available for full-time IT roles</p>
-            <p className="profile-detail">📧 labasanzyramae24@gmail.com</p>
+            <p className="profile-detail">📧 zyramaelabasan0@gmail.com</p>
           </CardContent>
         </Card>
 
@@ -95,7 +95,7 @@ function About() {
                   <div className="experience-item">
                     <h4 className="experience-title">
                       IT Web Development Intern (OJT) | SariSariPH{" "}
-                      <span className="experience-date">• Feb 2026 - Apr 2026</span>
+                      <span className="experience-date">• Jan 2026 - Apr 2026</span>
                     </h4>
                     <p className="experience-description">
                       Performed rigorous quality testing and bug identification. Executed database migrations using Prisma, specifically ensuring exact targeting for the production sarisariph database. Submitted comprehensive weekly system health reports.
@@ -105,17 +105,17 @@ function About() {
                   <div className="experience-item">
                     <h4 className="experience-title">
                       Lead Developer (Capstone) | Cafeteria Management System{" "}
-                      <span className="experience-date">• Apr 2025 - Feb 2026</span>
+                      <span className="experience-date">• June 2025 - March 2026</span>
                     </h4>
                     <p className="experience-description">
-                      Led a 5-person development team using Git version control. Transitioned legacy project architecture to modern frameworks utilizing Next.js, Prisma, and PostgreSQL. Successfully managed live cloud deployment on DigitalOcean.
+                      Led a 3-person development team using Git version control. Transitioned legacy project architecture to modern frameworks utilizing Next.js, Prisma, and PostgreSQL. Successfully managed live cloud deployment on DigitalOcean.
                     </p>
                   </div>
 
                   <div className="experience-item">
                     <h4 className="experience-title">
                       Freelance Graphic Designer{" "}
-                      <span className="experience-date">• Jan 2026 - Present</span>
+                      <span className="experience-date">• Sept 2020 - Jan 2026</span>
                     </h4>
                     <p className="experience-description">
                       Designed comprehensive brand identities, vector logos (SVG format), and physical merchandise marketing materials such as woven labels and jersey mockups for clients like Rebruv Athletics.

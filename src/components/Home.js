@@ -17,10 +17,10 @@ function Home({ name }) {
           <p className="intro-text">Hi, I am</p>
           <h1 className="home-name">{name || "Zyra Mae P. Labasan"}</h1>
           <h2 className="home-role">
-            Full Stack Web Developer | Aspiring Data Analyst | UX/UI Designer
+            Aspiring Full Stack Web Developer | Data Analyst | UX/UI Designer
           </h2>
           <p className="home-description">
-            A detail-oriented IT professional with hands-on experience in full-stack web development, cloud deployment, and quality assurance. Proven ability to modernize legacy code, collaborate in development teams using Git, and deliver scalable web applications.
+            A detail-oriented IT professional with hands-on experience in web development, cloud deployment, and quality assurance. Proven ability to modernize legacy code, collaborate in development teams using Git, and deliver scalable web applications.
           </p>
           <div className="home-buttons">
             <a href="/Zyra_Mae_Labasan_Resume.pdf" className="btn primary" download>

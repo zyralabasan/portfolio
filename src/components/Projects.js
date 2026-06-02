@@ -80,7 +80,7 @@ const Projects = () => {
       image: project4Image,
       tags: ["Python", "Django", "HTML/CSS", "SCSS", "JavaScript"],
       liveUrl: "#",
-      githubUrl: "https://github.com/zyralabasan/payroll-management-system.git",
+      githubUrl: "https://github.com/zyralabasan/PMS.git",
     },
     {
       id: 5,
